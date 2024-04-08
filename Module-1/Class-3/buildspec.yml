@@ -12,7 +12,10 @@ phases:
       - cd lib
       - zip -r9 ../deployment_package.zip .
       - cd ..
-      - zip -g deployment_package.zip Module-1/Class-3/lambda_function.py
+      - cd Module-1/Class-3/
+      - zip -g ../../deployment_package.zip lambda_function.py
+      - cd ..
+      - cd ..
   post_build:
     commands:
       - echo "Uploading to S3..."
