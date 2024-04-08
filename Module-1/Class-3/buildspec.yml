@@ -18,5 +18,5 @@ phases:
       - echo "Uploading to S3..."
       - aws s3 cp deployment_package.zip s3://aws-de-m1-c3-a1/Lambda_Build/
       - echo "Updating Lambda function via S3..."
-      - aws lambda update-function-code --function-name github-to-lambda-cicd --s3-bucket aws-de-m1-c3-a1 --s3-key Lambda_Build/deployment_package.zip
+      - aws lambda update-function-code --function-name aws-de-m1-c3-a1-lambda --s3-bucket aws-de-m1-c3-a1 --s3-key Lambda_Build/deployment_package.zip
       - echo "Deployment complete!"
